@@ -2790,7 +2790,7 @@ public class MdeBot {
             .body(context -> {
                     String targplat = (String) context.getIntent().getValue("targplat");
                     reactPlatform.reply(context, "The smart contract will be generated in " + targplat);
-                    reactPlatform.reply(context, "Great!! It's all done. The smart contract will be in the src-gen folder.");
+                    reactPlatform.reply(context, "Great!! It's all done. The smart contract will be in the ./xatkit/xatkit-examples/MdeBot/src-gen folder.");
                     a1.set(targplat);
                     setTargetPlatform(a1);
                     generateWholeFile();
