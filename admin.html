@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="#xatkit.server/admin/css/xatkit.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <style>
+        .collapsible {
+            background-color: #ee2a14;
+            color: white;
+            cursor: pointer;
+            padding: 25px;
+            width: 100%;
+            border: none;
+            text-align: center
+            outline: none;
+            font-size: 20px;
+            margin-bottom: 10px;
+            }
+
+            .active, .collapsible:hover {
+            background-color: #2ab6f7;
+            }
+
+            .collapsible:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            }
+
+            .active:after {
+            content: "\2212";
+            }
+
+            .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+            margin-bottom: 10px;
+            }
+
+            .button {
+            background-color: #2ab6f7; /* Green */
+            border: none;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            margin-bottom: 40px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            }
+
+            .tutorials
+            {
+            margin-top: 2%;
+            }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center; font-size: 250%; margin-top: 2%;">iContractBot - Your guide for creating smart contracts</h2>
+    <div class="container tutorials">
+
+        <h2 style="text-align: center; font-size: 150%; margin-bottom: 2%;">Important concepts and instructions</h2>
+
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <button class="collapsible">General Instructions</button>
+                <div class="content">
+                  <p>First of all, thank you for using iContractBot. This chtabot will help you to generate smart contracts. It would be great if you could go through all the instructions.</p>
+                  <br>
+                  <h4>Points to be noted</h4>
+                  <ul>
+                    <li>Please try to be elaborate with the chatbot. For example, if you want to create a participant, then the input should be <b>Create a participant</b> or <b>I want to create a participant</b>. The actions that have to be carried out are closely knit. Therefore, if enough information is not provided, then the chatbot may generate wrong codes.</li>
+                    <li>When you are dealing with a particular element, then specify that you intend to act upon it. For example, suppose you want to set the identifer for a participant, then the input should be <b>I want {name} to be the identifier for the participant</b>.</li>
+                    <li>If the chatbot replies <b>Sorry, I didn't get you</b>, then don't get panicked. It's because the chatbot got confused between two states. Therefore, as mentioned in the first point, try to be a little more elaborate.</li>
+                    <li>The terms <b>participant</b> and <b>identifier</b> have been explained below for clarity.</li>
+                    <li>Also, there's a use case, which hopefully, will make things clearer.</li>
+                    <li>Next up, there's a test case, which you have to generate using the chatbot.</li>
+                    <li>Please go through the sections given below for more clarity. This would make the generating smart contract for the test case easier.</li>
+                    <li>We have kept the test case as simple as possible where you have to only create elements. So, take it easy.</li>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <button class="collapsible">Contract</button>
+                <div class="content">
+                  <ul>
+                    <li>This is what you are going to create in the whole process.</li>
+                    <li>Contract contains everything that can be imposed onto a contract.</li>
+                    <li>A contract is made up of three basic elements - <b>Participant</b>, <b>Asset</b> and <b>Transaction</b>. Therefore, you will be creating/editing/deleting these three while interacting with the chatbot.</li>
+                    <li> When writing a smart contract one would have to define a name for it and the targeted platform (Hyperledger
+                      Composer, Microsoft Azure, Ethereum).</li>
+                  </ul>
+                  <h4>Instructions while chatting with the bot</h4>
+                  <ul>
+                    <li>You'll have to say that you want to create a contract to start the conversation. Then, the name has to be specified.</li>
+                    <li>Then, you keep adding or editing elements to the contract.</li>
+                    <li>After you are done adding all the approproate elements to the chatbot, just say <b>The contract is complete</b>.</li>
+                    <li><b>Please edit the bot according to the hierarchy. That is, the building blocks of a contract are elements - participants, assets and transactions. Therefore, first create them. The building blocks of elements are parameters and relationships. Therefore, you first create or edit an element and then, you create/edit/delete parameters or relationship.</b></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <button class="collapsible">Asset</button>
+                <div class="content">
+                  <ul>
+                    <li> Assets are tangible or intangible goods, services, or property.</li> 
+                    <li> Assets can represent almost anything of value, whether physical or virtual, for example, a house for sale, the sale listing, the land registry certificate for that house, and the insurance documents for that house may all be assets in one or more smart contracts.</li>
+                    <li>Assest contain parameters which characterise them.</li>
+                    <li> Assets must have a unique identifier, but other than that, they can contain whatever parameters you define.</li>
+                    <li> Assets may be related to a transaction in an AssetRel relationship.</li>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <button class="collapsible">Participant</button>
+                <div class="content">
+                  <ul>
+                    <li>Participants are members of a smart contract. They are the ones who'll be using the functionalities of the smart contract.</li>
+                    <li>They may own assets and submit transactions.</li>
+                    <li>Participants contain parameters which characterise them.</li>
+                    <li>Participant types are modeled, and like assets, must have an identifier and can have any other parameters as required.</li>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <button class="collapsible">Transaction</button>
+                <div class="content">
+                    <ul>
+                        <li>In blockchain scenario, transactions represent a means for executing some task.</li>
+                        <li> Transactions are the mechanism by which participants interact with assets. </li>
+                        <li> This could be as simple as a participant placing a bid on an asset in an auction, or an auctioneer marking an auction closed, automatically transferring ownership of the asset to the highest bidder.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <button class="collapsible">Parameter</button>
+                <div class="content">
+                  <ulp>
+                      <li> Parameters (attributes) represent a user-defined type to be included in elements such as asset, participant and transactions.</li>
+                  </ul>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <button class="collapsible">Relationship</button>
+                <div class="content">
+                  <p>
+                      Relationship represents the relationships that different elements can have. They can contain Events with their own description and a name.
+                      These relationships can come in two types:
+                  <ul>
+                     <li>The first one is TranRel, which is a relationship between Participant and Transaction.</li>   
+                     <li>The second one is AssetRel, which is a relationship between Transaction and Asset.</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <button class="collapsible">Use Case</button>
+                <div class="content">
+                  <p>Lets consider vehicle auction as an example. In this use case, a smart contract is used to auction vehicles, where the vehicle is the key asset. There are two participants in this example: owner and bidder. The bidder can place bids on the vehicles that they are interested in. 
+                      So in summary we have:
+                      <ul>
+                          <li> Asset: vehicle </li>
+                          <li> Participant: owner and bidder </li>
+                          <li>Transaction: place bid</li>
+                      </ul>
+                      </p>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <button class="collapsible">Test Case</button>
+                <div class="content">
+                  <p>Lets consider vehicle auction as an example. In this use case, a smart contract is used to auction vehicles, where the vehicle is the key asset. There are two participants in this example: owner and bidder. The bidder can place bids on the vehicles that they are interested in. 
+                      So in summary we have:
+                      <ul>
+                          <li> Asset: vehicle </li>
+                          <li> Participant: owner and bidder </li>
+                          <li>Transaction: place bid</li>
+                      </ul>
+                      </p>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+
+    <div id="xatkit-chat"></div>
+    <script src="#xatkit.server/admin/js/xatkit.js"></script>
+    <script>xatkit.renderXatkitWidget({
+            'server' :  '#xatkit.react_server', 
+            'username' :'#xatkit.username',
+            'storage' : {
+                'autoClear' : true
+            }
+        });
+    </script>
+
+    <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+</body>
+</html>
